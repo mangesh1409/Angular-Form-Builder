@@ -23,11 +23,14 @@ export class AppComponent {
   });
 
   Submitdata(profileForm){
-    // console.log(profileForm.value);
     this.data = profileForm.value;
     // console.log(profileForm.controls);
     console.log(profileForm.controls.nfgname.value);
-    console.log(profileForm.controls.nfgemail.value);
+    console.log(this.profileForm.get('nfgname').value);
+    console.log(this.profileForm.controls.nfgemail.value);
+    console.log(this.profileForm.get('nfgaddress.street').value);
+    console.log(this.profileForm.get('nfgaddress.city').value);
+    console.log(this.profileForm.get('nfgaddress.state').value);
 }
   
   updateProfile() {
